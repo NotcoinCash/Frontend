@@ -1,0 +1,12 @@
+.coin__button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: inherit;
+    cursor: pointer;
+}

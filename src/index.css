@@ -1,0 +1,6 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+
+body {
+    background: linear-gradient(180deg, #677EFE 0%, #111E61 100%);
+}
