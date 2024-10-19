@@ -1,0 +1,25 @@
+.nav {
+    background: #949CB34F;
+    height: 50px;
+    width: 100%;
+    border-radius: 48px;
+    margin-top: 32px;
+}
+
+.nav__elements {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 47px;
+}
+
+.nav__elements-item {
+
+}
+
+@media screen and (max-height: 668px) {
+    .nav {
+        margin-top: 15px;
+    }
+}

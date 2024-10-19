@@ -3,9 +3,10 @@ import './Coin.css';
 
 function Coin() {
     return (
-        <button className='coin__button'>
+        <div className='coin__button'>
             <img className='coin__img' src={coinIMG} alt="coin" />
-        </button>
+            <span className="coin__print"></span>
+        </div>
     );
 }
 

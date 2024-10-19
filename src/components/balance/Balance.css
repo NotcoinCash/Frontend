@@ -1,0 +1,31 @@
+.balance {
+
+}
+
+.balance__text {
+    color: #FFFFFF80;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    line-height: 23px;
+    margin-top: 80px;
+}
+
+.balance__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance__info-img {
+
+}
+
+.balance__info-amount {
+    color: #FBFBFB;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    margin-left: 16px;
+    margin: 16px 0 24px 16px;
+}
