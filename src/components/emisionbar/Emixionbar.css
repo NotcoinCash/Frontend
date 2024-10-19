@@ -21,3 +21,9 @@
     background-color: #677EFE;
     border-radius: 0 12px 12px 0;
 }
+
+@media screen and (max-height: 668px) {
+    .emisionbar {
+        margin: 16px 0 16px 0;
+    }
+}

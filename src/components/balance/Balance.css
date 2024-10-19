@@ -29,3 +29,9 @@
     margin-left: 16px;
     margin: 16px 0 24px 16px;
 }
+
+@media screen and (max-height: 668px) {
+    .balance__text {
+        margin-top: 25px;
+    }
+}
