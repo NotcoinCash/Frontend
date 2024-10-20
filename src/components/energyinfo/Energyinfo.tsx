@@ -10,6 +10,22 @@ function getEnergyPercent(totalEnergy: number, availableEnergy: number) {
     return (availableEnergy / totalEnergy) * 100;
 }
 
+function energyAmount(totalEnergy: number, availableEnergy: number) {
+    const energyEmoji = '⚡'
+    const lowEnergyEmoji = '🪫'
+
+    let emoji = ''
+
+    if (availableEnergy === 0) {
+        emoji = lowEnergyEmoji
+    } else {
+        emoji = energyEmoji
+    }
+
+    return `${availableEnergy}/${totalEnergy} ${emoji}`
+
+}
+
 function Energyinfo({ totalEnergy, availableEnergy }: EnergyinfoProps) {
     const [energyPercent, setEnergyPercent] = useState<number>(0);
 
@@ -26,7 +42,7 @@ function Energyinfo({ totalEnergy, availableEnergy }: EnergyinfoProps) {
                 ></div>
             </div>
             <div className="energyinfo__amount">
-                {availableEnergy}/{totalEnergy} ⚡
+                {energyAmount(totalEnergy, availableEnergy)}
             </div>
         </div>
     );

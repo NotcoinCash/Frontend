@@ -17,6 +17,8 @@ function userClick(
     setAvailableEnergy: React.Dispatch<React.SetStateAction<number>>,
     touchCount: number
 ) {
+    if (availableEnergy === 0) return
+
     const totalClick = click * touchCount;
     setBalance(balance += totalClick);
     setAvailableEnergy(availableEnergy -= totalClick);
