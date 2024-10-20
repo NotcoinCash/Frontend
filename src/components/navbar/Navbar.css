@@ -4,6 +4,7 @@
     width: 100%;
     border-radius: 48px;
     margin-top: 32px;
+    backdrop-filter: blur(11px)
 }
 
 .nav__elements {

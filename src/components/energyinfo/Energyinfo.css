@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     margin-top: 72px;
 }
 
@@ -15,7 +16,6 @@
 
 .energyinfo__bar-energy {
     height: 100%;
-    width: 100%;
     background-color: #E2E3E4;
     border-radius: 42px;
 }
@@ -28,7 +28,7 @@
     margin-bottom: 53px;
 }
 
-@media screen and (max-height: 668px) {
+@media screen and (max-height: 700px) {
     .energyinfo__amount {
         margin-bottom: 30px;
     }
