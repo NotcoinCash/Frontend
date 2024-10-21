@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import coinIMG from '../../assets/coin.svg';
 import './Coin.css';
 
@@ -25,19 +26,28 @@ function userClick(
 }
 
 function Coin({ click, balance, setBalance, availableEnergy, setAvailableEnergy }: CoinProps) {
+    const [isClicked, setIsClicked] = useState<boolean>(false);
+
     const handleTouch = (e: React.TouchEvent<HTMLImageElement>) => {
         const touchCount = e.touches.length;
         if (touchCount > 0) {
             userClick(click, balance, setBalance, availableEnergy, setAvailableEnergy, touchCount);
+            triggerBounceAnimation();
         }
     };
+
+    const triggerBounceAnimation = () => {
+        setIsClicked(true);
+        setTimeout(() => setIsClicked(false), 100);
+    };
+
 
     return (
         <div className='coin__button'>
             <div className="coin__blur-elipse"></div>
             <img
                 onTouchStart={handleTouch}
-                className='coin__img'
+                className={`coin__img ${isClicked ? 'clicked' : ''}`}
                 src={coinIMG}
                 alt="coin"
             />
