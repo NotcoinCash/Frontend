@@ -18,7 +18,7 @@ const navBarSVGs = [
 
 
 function Navbar() {
-    const [activeIndex, setActiveIndex] = useState(0)
+    const [activeIndex, setActiveIndex] = useState(5)
     const location = useLocation()
 
     useEffect(() => {
