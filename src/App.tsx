@@ -16,7 +16,7 @@ function App() {
         <div className="container">
             <div className="blur__element"></div>
             <Emisionbar></Emisionbar>
-            <main className="main">
+            <main className="content">
                 <Balance
                     balance={balance}
                 ></Balance>
