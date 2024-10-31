@@ -1,13 +1,14 @@
 import './CustomButton.css'
 
 interface CustomButtonProps {
-    text: string;
+    children: React.ReactNode;
     className: string;
+    onclickAction: any;
 }
 
-function CustomButton({ text, className }: CustomButtonProps) {
+function CustomButton({ children, className, onclickAction }: CustomButtonProps) {
     return (
-        <button className={`custom-button ${className}`}>{text}</button>
+        <button onClick={() => onclickAction()} className={`custom-button ${className}`}>{children}</button>
     )
 } 
 
