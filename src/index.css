@@ -9,15 +9,24 @@ button {
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     backdrop-filter: blur(11.4px);
     width: 100%;
-    max-height: 506px;
+    height: 506px;
     border-radius: 18px;
+    padding: 27px;
 }
 
 .projectname {
-    margin: 140px 0 18px 0;
+    margin: 76px 0 18px 0;
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+.sub__content {
+    display: flex;
+    flex-direction: column;
+    background-color: #212A61;
+    border-radius: 18px;
+    padding: 16px;
 }
 
 body {
