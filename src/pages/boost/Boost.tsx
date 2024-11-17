@@ -2,12 +2,12 @@ import Navbar from "../../components/navbar/Navbar";
 import TapIMG from '../../assets/tasks/tap.svg'
 import MaximizerIMG from '../../assets/boosts/maximizer.svg'
 import ChargerIMG from '../../assets/boosts/charger.svg'
-import { useState } from "react";
+// import { useState } from "react";
 import './Boost.css'
 
 
 function Boost() {
-    const [boosts, setBoosts] = useState([
+    const boosts = [
         {
             img: TapIMG,
             title: 'Tap',
@@ -26,7 +26,27 @@ function Boost() {
             price: '500',
             level: '1',
         }
-    ])
+    ]
+    // const [boosts, setBoosts] = useState([
+    //     {
+    //         img: TapIMG,
+    //         title: 'Tap',
+    //         price: '2500',
+    //         level: '1',
+    //     },
+    //     {
+    //         img: MaximizerIMG,
+    //         title: 'Maximizer',
+    //         price: '2500',
+    //         level: '1',
+    //     },
+    //     {
+    //         img: ChargerIMG,
+    //         title: 'Charger',
+    //         price: '500',
+    //         level: '1',
+    //     }
+    // ])
 
     return (
         <div className="container">
@@ -39,7 +59,7 @@ function Boost() {
                     <div className="sub__content">
                         <div className="boosts__items">
                             {
-                                boosts.map((boost, index) => {
+                                boosts.map((boost) => {
                                     return (
                                         <div className="boosts__item">
                                             <div className="boosts__item-content">

@@ -10,6 +10,7 @@ interface CoinProps {
     setBalance: React.Dispatch<React.SetStateAction<number>>;
     availableEnergy: number;
     setAvailableEnergy: React.Dispatch<React.SetStateAction<number>>;
+    clickFunc: any;
 }
 
 function userClick(
@@ -55,7 +56,9 @@ function Coin({ click, balance, setBalance, availableEnergy, setAvailableEnergy 
     const handleTouch = (e: React.TouchEvent<HTMLImageElement>) => {
         const touchCount = e.touches.length;
         if (touchCount > 0) {
-            userClick(click, balance, setBalance, availableEnergy, setAvailableEnergy, touchCount, initData, userID);
+            if (initData) {
+                userClick(click, balance, setBalance, availableEnergy, setAvailableEnergy, touchCount, initData, userID);
+            }
             triggerBounceAnimation();
         }
     };

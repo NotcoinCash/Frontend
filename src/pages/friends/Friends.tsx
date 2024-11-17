@@ -16,7 +16,7 @@ function ListFriends({friendsList, popUpFunc}: any) {
     return (
         <div className="friends__list">
             {
-                friendsList.map((friend, index) => {
+                friendsList.map((friend: any, index: any) => {
                     return (
                         <div key={index} className="friends__list-item">
                             <div className="friends__item-wrapper">
@@ -52,18 +52,21 @@ function Friends() {
     const [friends, setFriends] = useState([])
     const [userID, setUserID] = useState<number>(0)
     const [initData, setInitData] = useState<string>('')
-    const [referalLink, setReferalLink] = useState<string>('')
+    // const [referalLink, setReferalLink] = useState<string>('')
 
     useEffect(() => {
-        setInitData('query_id=AAH3P2gzAAAAAPc_aDN10jtS&user=%7B%22id%22%3A862470135%2C%22first_name%22%3A%22Mukhailo%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22half_zero%22%2C%22language_code%22%3A%22uk%22%2C%22allows_write_to_pm%22%3Atrue%2C%22photo_url%22%3A%22https%3A%5C%2F%5C%2Ft.me%5C%2Fi%5C%2Fuserpic%5C%2F320%5C%2FbDiaun_9We6PjACSd18X59xT-2733ewKHAgQ6mSx7Dg.svg%22%7D&auth_date=1731747785&hash=414d95d81477d0a010cbae08a156452b89d7151d71d0481693a3e4c29e447a37')
-        setUserID(862470135)
-    }, [])
+        if (WebApp.initDataUnsafe.user) {
+            setUserID(WebApp.initDataUnsafe.user.id)
+            setInitData(WebApp.initData)
+        }
+    }, []);
 
     useEffect(() => {
         const setBaseValues = async () => {
             if (userID && initData) {
-                const respons = await getFriends(userID, initData)
+                const respons: any = await getFriends(userID, initData)
                 setFriends(respons.data.referrals)
+                
             }
         }
 
@@ -108,7 +111,7 @@ function Friends() {
                         <img src={inviteFriendsImg} alt="frinedIMG" className="popup__friends-img" />
                         <h3 className="friends__popup-title">Invite Friends</h3>
                         <div className="friends__popup-buttons">
-                            <CustomButton className="friends__popup-button">Share link</CustomButton>
+                            <CustomButton onclickAction={() => {}} className="friends__popup-button">Share link</CustomButton>
                             <CustomButton className="friends__popup-button" onclickAction={handleCopyLink}>Copy link</CustomButton>
                         </div>
                     </PopUp>
